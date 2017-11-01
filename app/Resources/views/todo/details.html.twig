@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<a class="btn btn-default" href="/symfonyCRUD/web/app_dev.php">Back to Todos</a>
+	<hr>
+	<h2 class="page-header">{{todo.name}}</h2>
+	<ul class="list-group">
+		<li  class="list-group-item"><h4>Category:</h4> {{todo.category}}</li>
+		<li class="list-group-item"><h4>Priority:</h4> {{todo.priority}}</li>
+		<li class="list-group-item"><h4>Due:</h4> <strong>{{todo.dueDate|date('F j,Y,g:i a')}}</strong></li>
+	</ul>
+	<p>
+		{{todo.description}}
+	</p>
+{% endblock %}
